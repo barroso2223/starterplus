@@ -611,6 +611,16 @@ video {
 	margin-bottom: 2rem;
 }
 
+#about .split {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#about .splitLeft {
+	display: grid;
+	place-content: center;
+}
+
 #services,
 #Me {
 	min-height: 100dvh;
@@ -1034,22 +1044,4 @@ video {
 		max-width: 90dvw;
 		margin: auto;
 	}
-	/* }
-
-	#about .splitRight {
-		margin-top: -4rem;
-	
-	}
-	#about .splitRight .imageCards {
-		gap: 1rem;
-	}
-
-	#about .splitLeft {
-		text-align: start;
-	}
-
-	#about .splitLeft .serviceList {
-		text-align: left;
-		margin-top: 1rem;
-	} */
 }
