@@ -933,16 +933,19 @@ video {
 /* @media */
 
 @media screen and (max-width: 850px) {
-	* {
-		text-align: center;
-	}
+	
 
-	#home {
+	#home,
+	#about,
+	#services,
+	#gallery,
+	#contactMe {
 		display: grid;
 		place-items: center;
 		padding: 0 1rem;
 		margin: auto;
 		min-height: 100dvh;
+		text-align: center;
 	}
 
 	#home header {
@@ -1018,30 +1021,12 @@ video {
         width: 70%;
     }
 
-	#starterHome .myLogo {
-        width: var(--logoWidth);
-        margin-top: 2rem;
-        margin: 0 auto;
-		padding-top: .5rem;
-		margin-bottom: -3rem;
-	}
-
-	.split {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: auto;
-		padding-bottom: 1rem;
-		padding-top: .5rem;
-	}
-
 	.splitLeft,
 	.splitRight {
 		display: grid;
 		place-items: center;
-		text-align: left;
-		max-width: 90dvw;
+		text-align: center;
+		max-width: 80dvw;
 		margin: auto;
 	}
 }
