@@ -22,7 +22,7 @@
     --fsNavBar: clamp(.5rem, 2vw, .65rem);
     --logoWidth: clamp(15rem, 5vw, 20rem);
 	--serviceLogo: clamp(10rem, 4vw, 15rem);
-	--splitWidth: clamp(300px, 40vw, 700px);
+	--splitWidth: clamp(300px, 50vw, 700px);
 }
 
 *,
@@ -479,8 +479,7 @@ nav .faFonts {
 
 /* home */
 
-#home, 
-#change {
+#home {
 	min-height: 100dvh;
 	max-width: 100dvw;
 	color: var(--clrMain100);
@@ -490,6 +489,15 @@ nav .faFonts {
     z-index: 1;
 	display: grid;
 	place-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: var(--clrMain900);
+    inset: 0;
+    opacity: .5;
+    z-index: -1;
 }
 
 video {
@@ -525,8 +533,7 @@ video {
 	margin-bottom: 4rem;
 }
 
-#home .imgContainer a,
-#change .imgContainer a {
+#home .imgContainer a {
 	border: 2px solid var(--clrMain100);
 	background: var(--ombreTheme);
 	color: var(--clrMain100);
@@ -535,25 +542,13 @@ video {
 	
 }
 
-#home .imgContainer a:hover,
-#change .imgContainer a:hover {
+#home .imgContainer a:hover {
 	background: var(--bgaccent);
 	color: var(--clrMain100);
 
 }
 
-#home::before,
-#change::before {
-    content: "";
-    position: absolute;
-    background: var(--clrMain900);
-    inset: 0;
-    opacity: .71;
-    z-index: -1;
-}
-
-#home .imgContainer img,
-#change .imgContainer img {
+#home .imgContainer {
     border: 1px solid --clrMain900;
     border-radius: .5rem;
     box-shadow: 0 0 15px var(--clrMain100);
@@ -571,7 +566,7 @@ video {
 
 .splitLeft,
 .splitRight {
-	min-width: 275px;
+	min-width: 300px;
 }
 
 .themeButton {
