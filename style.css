@@ -1034,6 +1034,7 @@ video {
 		max-width: 90dvw;
 		margin: auto;
 	}
+	/* }
 
 	#about .splitRight {
 		margin-top: -4rem;
@@ -1050,9 +1051,5 @@ video {
 	#about .splitLeft .serviceList {
 		text-align: left;
 		margin-top: 1rem;
-	}
-
-	#services {
-		margin-left: .75rem;
-	}
+	} */
 }
