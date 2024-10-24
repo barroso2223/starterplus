@@ -84,7 +84,10 @@ p {
 }
 
 .fa {
-	color: var(--clrMain100);
+	color: var(--ffAccent);
+	font-size: 1.5rem;
+	place-content: center;
+	text-align: center;
 }
 
 .fa:hover {
@@ -113,6 +116,8 @@ p {
 	justify-content: center;
 	margin: 0 auto;
 	color: var(--clrMain100);
+    gap: 1rem;
+    padding-right: 2rem;
 }
 
 #nextPageIcons a:hover {
@@ -288,18 +293,6 @@ nav ul li {
 	margin: -1rem;
 }
 
-
-.serviceLogo {
-	width: var(--serviceLogo);
-	margin-top: .75rem;
-	padding-bottom: 3rem;
-	margin: auto;
-}
-
-.serviceLogo img {
-	width: 90%;
-}
-
 nav .faFonts {
 	padding-left: 1rem;
 	padding-top: .75rem;
@@ -321,16 +314,7 @@ nav .faFonts {
 	place-items: center;
 }
 
-#home::before {
-    content: "";
-    position: absolute;
-    background: var(--clrMain900);
-    inset: 0;
-    opacity: .5;
-    z-index: -1;
-}
-
-video {
+#home video {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -338,6 +322,7 @@ video {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	opacity: .6;
 	z-index: -2;
 	background: var(--clrMain900);
 }
@@ -359,7 +344,7 @@ video {
 	padding-top: .5rem;
 }
 
-#home .container {
+/* #home .container {
 	margin-bottom: 4rem;
 }
 
@@ -383,7 +368,7 @@ video {
     border-radius: .5rem;
     box-shadow: 0 0 15px var(--clrMain100);
 
-}
+} */
 
 .split {
 	display: grid;
@@ -398,33 +383,24 @@ video {
 .splitRight {
 	min-width: 300px;
 }
-
-.themeButton {
-	background: var(--ombreTheme);
-}
-
-.buttonList a {
-	padding: 0 .5rem;
-}
 	
 #about {
 	min-height: 100dvh;
 	max-width: 100dvw;
 	display: grid;
     gap: 1rem;
-	text-align: center;
+	text-align: left;
     place-items: center;
 	place-content: center;
-	/* margin: auto; */
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	margin: auto;
 	background: var(--bgaccent);
 	color: var(--clrMain100);
     position: relative;
-	line-height: 1.3;
+	/* line-height: 1.3; */
 	z-index: 1;
 }
 
-.imgCard {
+#about .imgCard {
 	overflow: hidden;
 } 
 
@@ -439,6 +415,7 @@ video {
 #about .split {
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	place-content: center;
 }
 
 #about .splitLeft {
@@ -492,10 +469,6 @@ video {
 	width: clamp(250px, 60vw, 900px);
 	padding-top: .5rem;
 }
-
-
-
-
 
 #gallery {
 	min-height: 100dvh;
@@ -652,15 +625,13 @@ video {
 #Contacto {
 	color: var(--clrMain100);
 	background: var(--ombreTheme);
-	min-height: 80dvh;
+	min-height: 100dvh;
 	max-width: 100dvw;
-	padding: .5rem 2rem;
-	margin: 0 auto;
-	overflow: hidden;
 	display: grid;
 	text-align: center;
 	place-items: center;
 	position: relative;
+	padding-bottom: 2rem;
 }
 /* 
 #contactMe::before,
@@ -675,6 +646,7 @@ video {
 #contactMe h2,
 #contactMe p {
 	padding-bottom: 1rem;
+	width: var(--splitWidth);
 }
 
 .contactContainer {
@@ -688,17 +660,20 @@ video {
 	flex-direction: column;
 }
 
-.fa {
+/* .fa {
 	color: var(--clrMain100);
 	font-size: 1.5rem;
 	margin: 1rem;
 	place-content: center;
 	text-align: center;
-}
+} */
+
 .contactLinks {
 	display: grid;	
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	place-items: center;
+	gap: 4rem;
+	padding-bottom: 2rem;
 }
 
 .contactGrid {
@@ -762,14 +737,14 @@ video {
 }
 
 #footer {
-	min-height: 20dvh;
+	min-height: max-content;
 	max-width: 100dvw;
 	padding: .5rem 2rem;
 	background: var(--clrMain900);
 	color: var(--clrMain100);
 	text-align: center;
-	margin-bottom: 1rem;
 	z-index: 1000;
+	padding-top: 2rem;
 }
 
 #footer a {
@@ -954,7 +929,6 @@ video {
 /* @media */
 
 @media screen and (max-width: 850px) {
-	
 
 	#home,
 	#about,
@@ -963,20 +937,21 @@ video {
 	#contactMe {
 		display: grid;
 		place-items: center;
-		padding: 0 1rem;
+		padding: 1rem 1rem;
 		margin: auto;
 		min-height: 100dvh;
+		min-width: 100dvw;
 		text-align: center;
 	}
 
 	#home header {
-		height: 30dvh;
-		padding-top: .25rem;
+		min-height: 30dvh;
+		margin-top: -1rem;
 	}
 
-	#home .desktop {
-		margin-top: -1rem;
-		margin-bottom: 3rem;
+	#home .container {
+		margin-bottom: 4rem;
+		z-index: 1;
 	}
 
     #navBar {
@@ -1011,7 +986,7 @@ video {
     } 
 
 	#navBar ul .faFonts {
-		margin-left: 2rem;
+		/* margin-left: 2rem; */
 		padding: 0 .5rem;
 		scale: 2;
 	}
@@ -1061,6 +1036,24 @@ video {
 		max-width: 80dvw;
 		margin: auto;
 	}
+
+	#contactMe .container {
+        display: grid;
+        place-content: center;
+    }
+
+    #contactMe .container h2,
+    #contactMe .container p {
+        padding-left: 3rem;
+    }
+
+    .contactGrid ul {
+        margin-left: 1rem;
+    }
+
+    .calendar {
+        margin-top: -1rem;
+    }
 
 	.copyright {
         display: grid;
