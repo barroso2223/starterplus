@@ -7,9 +7,7 @@
 	--clrMain300: rgb(165, 163, 163);
 	--clrMain900: black;
     --bgaccent: rgb(87, 83, 83);
-	--ombreTheme: linear-gradient(45deg, var(--clrMain900), var(--clrTheme2), var(--clrTheme1));
-
-	
+	--ombreTheme: linear-gradient(45deg, var(--clrMain900), var(--clrTheme1), var(--clrMain900));
 
 	--ffTheme: "Source Code Pro", monospace, Helvetica, sans-serif;
 	--ffAccent: Arial, Helvetica, sans-serif;
@@ -891,19 +889,44 @@ video {
 	margin: 0 1rem;
 }
 
+.contactGrid li a {
+    text-decoration: none;
+	list-style: none;
+    color: var(--clrMain100);
+}
+
 .calendar {
 	width: clamp(300px, 40dvw, 600px);
 	max-height: 500px;
-	background: var(--clrMain100);
-	border: 2px solid var(--clrMain900);
-	box-shadow: 0 0 15px var(--clrMain900);
+	background: var(--clrTheme2);
+	/* border: 2px solid var(--clrTheme2); */
+	box-shadow: 0 0 15px var(--clrMain100);
 	border-radius: .5rem;
-	margin: 1rem 2rem;
+	padding: 1rem 2rem;
 	place-items: center;
 }
 
+.calendly-inline-widget {
+    margin-top: .5rem;
+    border-radius: .5rem;
+
+}
+
 .calendar a {
-	color: var(--clrTheme2);
+	color: var(--clrMain100);
+}
+
+.calendar span {
+    border: 1px solid var(--clrTheme1);
+    border-radius: .5rem;
+    width: fit-content;
+    height: min-content;
+    padding: .125rem;
+    font-family: var(--ffTheme);
+    font-weight: 600;
+    background: var(--ombreTheme);
+    color: var(--clrMain100);
+    gap: 1rem;
 }
 
 #footer {
@@ -1024,4 +1047,10 @@ video {
 		max-width: 80dvw;
 		margin: auto;
 	}
+
+	.copyright {
+        display: grid;
+        place-content: center;
+        padding-right: 2.5rem;
+    }
 }
